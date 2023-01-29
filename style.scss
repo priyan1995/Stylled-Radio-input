@@ -1,8 +1,32 @@
 $lightBg: "https://i.ibb.co/t2ghNcR/light-wood.jpg";
 $darkBg: "https://i.ibb.co/HK4jNK4/dark-wood.jpg";
+$textColor: #ffffff;
 
-body{
+body {
     background-image: url($darkBg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    .pd-form-wrapper {
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        &__input-wrapper {
+            margin: 1rem 0;
+        }
+
+
+        form {
+            label {
+                color: $textColor;
+                font-size: 2rem;
+            }
+
+            input[type="radio"] {
+                -webkit-appearance: none;
+            }
+        }
+    }
 }

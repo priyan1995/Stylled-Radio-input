@@ -2,4 +2,20 @@ body {
   background-image: url("https://i.ibb.co/HK4jNK4/dark-wood.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+body .pd-form-wrapper {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+body .pd-form-wrapper__input-wrapper {
+  margin: 1rem 0;
+}
+body .pd-form-wrapper form label {
+  color: #ffffff;
+  font-size: 2rem;
+}
+body .pd-form-wrapper form input[type=radio] {
+  -webkit-appearance: none;
 }/*# sourceMappingURL=style.css.map */
