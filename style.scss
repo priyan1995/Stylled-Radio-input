@@ -1,0 +1,8 @@
+$lightBg: "https://i.ibb.co/t2ghNcR/light-wood.jpg";
+$darkBg: "https://i.ibb.co/HK4jNK4/dark-wood.jpg";
+
+body{
+    background-image: url($darkBg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
