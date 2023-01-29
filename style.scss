@@ -26,11 +26,20 @@ body {
                 width: 30px;
                 height: 30px;
                 border-radius: 100%;
-                background: radial-gradient(#3131313d, red 47%);
+                background: radial-gradient(10% 10% at 50% 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0)), radial-gradient(12% 12% at 60% 25%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0)), radial-gradient(100% 100% at 60% 50%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.25) 50%);
                 left: 11px;
-                box-shadow: inset -5px -8px 17px -8px #ffffff36;
+                box-shadow: inset -5px -8px 17px -8px rgb(255 255 255 / 21%), inset -7px -20px 28px -20px #003ebad1;
                 transition: 0.5s;
                 z-index: 9;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    background: radial-gradient(#00000000, #08349e87);
+                    position: absolute;
+                    height: 100%;
+                }
             }
 
             label {
@@ -39,6 +48,7 @@ body {
                 font-size: 2rem;
                 position: relative;
                 padding-left: 70px;
+                cursor: pointer;
 
                 &::before {
                     content: "";
@@ -57,29 +67,111 @@ body {
 
             input[type="radio"] {
                 -webkit-appearance: none;
-                &:nth-child(1){
+
+                &:nth-child(1) {
                     &:checked~span {
                         transform: translateY(33px);
+                        animation: 1s ease moveBall;
                     }
                 }
 
-                &:nth-child(2){
+                &:nth-child(2) {
                     &:checked~span {
                         transform: translateY(106px);
+                        animation:1s ease moveBall2;
                     }
                 }
 
-                &:nth-child(3){
+                &:nth-child(3) {
                     &:checked~span {
                         transform: translateY(178px);
+                        animation:1s ease moveBall3;
                     }
                 }
 
-              
+
 
             }
 
 
         }
+    }
+}
+
+@keyframes moveBall {
+    0% {
+        transform: translateY(33px) scale(1);
+    }
+
+    25% {
+        transform: translateY(33px) scale(1.33);
+
+    }
+
+    50% {
+        transform: translateY(38px) scale(1);
+
+    }
+
+    67% {
+        transform: translateY(30px) scale(1);
+
+    }
+
+    83% {
+        transform: translateY(33px) scale(1);
+
+    }
+}
+
+@keyframes moveBall2 {
+    0% {
+        transform: translateY(33px) scale(1);
+    }
+
+    25% {
+        transform: translateY(33px) scale(1.33);
+
+    }
+
+    50% {
+        transform: translateY(118px) scale(1);
+
+    }
+
+    67% {
+        transform: translateY(103px) scale(1);
+
+    }
+
+    83% {
+        transform: translateY(106px) scale(1);
+
+    }
+}
+
+@keyframes moveBall3 {
+    0% {
+        transform: translateY(106px) scale(1);
+    }
+
+    25% {
+        transform: translateY(106px) scale(1.33);
+
+    }
+
+    50% {
+        transform: translateY(182px) scale(1);
+
+    }
+
+    67% {
+        transform: translateY(170px) scale(1);
+
+    }
+
+    83% {
+        transform: translateY(178px) scale(1);
+
     }
 }
