@@ -10,12 +10,40 @@ body .pd-form-wrapper {
   display: flex;
 }
 body .pd-form-wrapper__input-wrapper {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 body .pd-form-wrapper form label {
   color: #ffffff;
   font-size: 2rem;
+  position: relative;
+  padding-left: 70px;
+}
+body .pd-form-wrapper form label::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: radial-gradient(rgba(49, 49, 49, 0.2392156863), rgba(0, 0, 0, 0.4) 47%);
+  left: 0;
+  top: 0;
+  box-shadow: inset -5px -8px 17px -8px rgba(255, 255, 255, 0.2117647059);
 }
 body .pd-form-wrapper form input[type=radio] {
   -webkit-appearance: none;
+}
+body .pd-form-wrapper form input[type=radio]:checked {
+  position: relative;
+}
+body .pd-form-wrapper form input[type=radio]:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: radial-gradient(rgba(49, 49, 49, 0.2392156863), red 47%);
+  left: 10px;
+  top: 10px;
+  box-shadow: inset -5px -8px 17px -8px rgba(255, 255, 255, 0.2117647059);
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
