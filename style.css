@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
 body {
   background-image: url("https://i.ibb.co/HK4jNK4/dark-wood.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Mochiy Pop P One", sans-serif;
+  padding-left: 1rem;
 }
 body .pd-form-wrapper {
   height: 100vh;
@@ -21,7 +24,7 @@ body .pd-form-wrapper form span {
   height: 30px;
   border-radius: 100%;
   background: radial-gradient(10% 10% at 50% 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0)), radial-gradient(12% 12% at 60% 25%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0)), radial-gradient(100% 100% at 60% 50%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.25) 50%);
-  left: 11px;
+  left: 10px;
   box-shadow: inset -5px -8px 17px -8px rgba(255, 255, 255, 0.21), inset -7px -20px 28px -20px rgba(0, 62, 186, 0.8196078431);
   transition: 0.5s;
   z-index: 9;
@@ -36,7 +39,7 @@ body .pd-form-wrapper form span::before {
 }
 body .pd-form-wrapper form label {
   width: 100%;
-  color: #ffffff;
+  color: #aa7049;
   font-size: 2rem;
   position: relative;
   padding-left: 70px;
@@ -58,18 +61,18 @@ body .pd-form-wrapper form input[type=radio] {
 }
 body .pd-form-wrapper form input[type=radio]:nth-child(1):checked ~ span {
   transform: translateY(33px);
-  -webkit-animation: 1s ease moveBall;
-          animation: 1s ease moveBall;
+  -webkit-animation: moveBall 0.5s linear forwards;
+          animation: moveBall 0.5s linear forwards;
 }
 body .pd-form-wrapper form input[type=radio]:nth-child(2):checked ~ span {
   transform: translateY(106px);
-  -webkit-animation: 1s ease moveBall2;
-          animation: 1s ease moveBall2;
+  -webkit-animation: moveBall2 0.5s linear forwards;
+          animation: moveBall2 0.5s linear forwards;
 }
 body .pd-form-wrapper form input[type=radio]:nth-child(3):checked ~ span {
   transform: translateY(178px);
-  -webkit-animation: 1s ease moveBall3;
-          animation: 1s ease moveBall3;
+  -webkit-animation: moveBall3 0.5s linear forwards;
+          animation: moveBall3 0.5s linear forwards;
 }
 
 @-webkit-keyframes moveBall {
