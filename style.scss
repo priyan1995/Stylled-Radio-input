@@ -75,21 +75,21 @@ body {
                 &:nth-child(1) {
                     &:checked~span {
                         transform: translateY(33px);
-                        animation:  moveBall  0.5s linear forwards;
+                        animation: moveBall 0.5s linear forwards;
                     }
                 }
 
                 &:nth-child(2) {
                     &:checked~span {
                         transform: translateY(106px);
-                        animation: moveBall2  0.5s linear forwards;
+                        animation: moveBall2 0.5s linear forwards;
                     }
                 }
 
                 &:nth-child(3) {
                     &:checked~span {
                         transform: translateY(178px);
-                        animation: moveBall3  0.5s linear forwards;
+                        animation: moveBall3 0.5s linear forwards;
                     }
                 }
             }
