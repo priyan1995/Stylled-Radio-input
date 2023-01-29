@@ -19,18 +19,34 @@ body {
 
 
         form {
+            position: relative;
+
+            span {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background: radial-gradient(#3131313d, red 47%);
+                left: 11px;
+                box-shadow: inset -5px -8px 17px -8px #ffffff36;
+                transition: 0.5s;
+                z-index: 9;
+            }
+
             label {
+                width: 100%;
                 color: $textColor;
                 font-size: 2rem;
                 position: relative;
                 padding-left: 70px;
-                &::before{
+
+                &::before {
                     content: "";
                     position: absolute;
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;
-                    background: radial-gradient(#3131313d, #00000066 47% );
+                    background: radial-gradient(#3131313d, #00000066 47%);
                     left: 0;
                     top: 0;
                     box-shadow: inset -5px -8px 17px -8px #ffffff36;
@@ -41,24 +57,26 @@ body {
 
             input[type="radio"] {
                 -webkit-appearance: none;
-
-                &:checked{
-                    position: relative;
-                   &+label{
-                        &:after{
-                            content: "";
-                            position: absolute;
-                            width: 30px;
-                            height: 30px;
-                            border-radius: 100%;
-                            background: radial-gradient(#3131313d, red 47% );
-                            left: 10px;
-                            top: 10px;
-                            box-shadow: inset -5px -8px 17px -8px #ffffff36;
-                            transition: 0.5s;
-                        }
+                &:nth-child(1){
+                    &:checked~span {
+                        transform: translateY(33px);
                     }
                 }
+
+                &:nth-child(2){
+                    &:checked~span {
+                        transform: translateY(106px);
+                    }
+                }
+
+                &:nth-child(3){
+                    &:checked~span {
+                        transform: translateY(178px);
+                    }
+                }
+
+              
+
             }
 
 

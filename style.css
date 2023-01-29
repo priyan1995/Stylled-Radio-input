@@ -12,7 +12,22 @@ body .pd-form-wrapper {
 body .pd-form-wrapper__input-wrapper {
   margin: 2rem 0;
 }
+body .pd-form-wrapper form {
+  position: relative;
+}
+body .pd-form-wrapper form span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: radial-gradient(rgba(49, 49, 49, 0.2392156863), red 47%);
+  left: 11px;
+  box-shadow: inset -5px -8px 17px -8px rgba(255, 255, 255, 0.2117647059);
+  transition: 0.5s;
+  z-index: 9;
+}
 body .pd-form-wrapper form label {
+  width: 100%;
   color: #ffffff;
   font-size: 2rem;
   position: relative;
@@ -32,18 +47,12 @@ body .pd-form-wrapper form label::before {
 body .pd-form-wrapper form input[type=radio] {
   -webkit-appearance: none;
 }
-body .pd-form-wrapper form input[type=radio]:checked {
-  position: relative;
+body .pd-form-wrapper form input[type=radio]:nth-child(1):checked ~ span {
+  transform: translateY(33px);
 }
-body .pd-form-wrapper form input[type=radio]:checked + label:after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background: radial-gradient(rgba(49, 49, 49, 0.2392156863), red 47%);
-  left: 10px;
-  top: 10px;
-  box-shadow: inset -5px -8px 17px -8px rgba(255, 255, 255, 0.2117647059);
-  transition: 0.5s;
+body .pd-form-wrapper form input[type=radio]:nth-child(2):checked ~ span {
+  transform: translateY(106px);
+}
+body .pd-form-wrapper form input[type=radio]:nth-child(3):checked ~ span {
+  transform: translateY(178px);
 }/*# sourceMappingURL=style.css.map */
